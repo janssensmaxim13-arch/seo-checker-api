@@ -1,7 +1,13 @@
 MAX_PAGES = 10
 REQUEST_TIMEOUT = 10
+REQUEST_DELAY = 0.5
+TIMEOUT = 10
 
-SCORE_WEIGHTS = {
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; SEOHealthChecker/1.0)"
+}
+
+WEIGHTS = {
     "https": 5,
     "title": 15,
     "meta_desc": 10,
@@ -17,9 +23,4 @@ SCORE_WEIGHTS = {
     "broken_links": 10,
 }
 
-ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://seo-checker-web-nine.vercel.app",
-    "https://seo.janssens-janssens-webservices.be",
-    "https://www.janssens-janssens-webservices.be",
-]
+ALLOWED_ORIGINS = ["*"]

@@ -1,35 +1,25 @@
-"""
-SEO Health Checker - Configuration
-"""
-
-# Crawl settings
 MAX_PAGES = 10
-REQUEST_DELAY = 0.5
-TIMEOUT = 10
+REQUEST_TIMEOUT = 10
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; SEOHealthChecker/1.0)"
-}
-
-# Score weights (total = 100)
-WEIGHTS = {
+SCORE_WEIGHTS = {
+    "https": 5,
     "title": 15,
-    "meta_description": 10,
+    "meta_desc": 10,
     "h1": 10,
     "canonical": 5,
     "robots_meta": 5,
-    "open_graph": 5,
-    "images_alt": 10,
+    "og_tags": 5,
+    "img_alt": 10,
     "page_speed": 10,
-    "https": 5,
-    "mobile_viewport": 5,
+    "mobile": 5,
     "structured_data": 5,
     "internal_links": 5,
     "broken_links": 10,
 }
 
-# CORS - allowed origins
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://*.vercel.app",
+    "https://seo-checker-web-nine.vercel.app",
+    "https://seo.janssens-janssens-webservices.be",
+    "https://www.janssens-janssens-webservices.be",
 ]
